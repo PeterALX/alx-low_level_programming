@@ -17,10 +17,10 @@ int main(void)
 		j = 48;
 		while (j <= 57)
 		{
-			a = j;
+			a = i;
 			while (a <= 57)
 			{
-				b = a;
+				b = j + 1;
 				while (b <= 57)
 				{
 					putchar(i);
