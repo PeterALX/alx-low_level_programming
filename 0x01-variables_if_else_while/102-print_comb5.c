@@ -20,7 +20,7 @@ int main(void)
 			a = j;
 			while (a <= 57)
 			{
-				b = a + 1;
+				b = a;
 				while (b <= 57)
 				{
 					putchar(i);
