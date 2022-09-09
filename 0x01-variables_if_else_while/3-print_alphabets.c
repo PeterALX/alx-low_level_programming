@@ -7,9 +7,9 @@
 */
 int main(void)
 {
-	char n = 'A';
+	char n = 'z';
 
-	while (n <= 'z')
+	while (n >= 'A')
 	{
 		if (n <= 'Z' || n >= 'a')
 		{
