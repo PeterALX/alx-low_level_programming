@@ -1,25 +1,40 @@
 #include <stdio.h>
 
 /**
-* main - Entry point
-*
-* Return: 0
-*/
+ * main - Entry point
+ *
+ * Return: 0
+ */
 int main(void)
 {
 	int i = 48;
 	int j = 48;
+	int a = 48;
+	int b = 48;
+
 	while (i <= 57)
 	{
 		j = 48;
 		while (j <= 57)
 		{
-			putchar(i);
-			putchar(j);
-			if (i != 57 || j != 57)
+			while (a <= 57)
 			{
-				putchar(',');
-				putchar(' ');
+				b = 48;
+				while (b <= 57)
+				{
+					putchar(i);
+					putchar(j);
+					putchar(' ');
+					putchar(a);
+					putchar(b);
+					if (a != 57 || b != 57)
+					{
+						putchar(',');
+						putchar(' ');
+					}
+					b++;
+				}
+				b++;
 			}
 			j++;
 		}
