@@ -10,6 +10,7 @@ int main(void)
 	int i = 48;
 	int j = 48;
 	int k = 48;
+
 	while (i <= 57)
 	{
 		j = i + 1;
@@ -20,6 +21,7 @@ int main(void)
 			{
 				putchar(i);
 				putchar(j);
+				putchar(k);
 				if (i != 56 || j != 57 || k != 57)
 				{
 					putchar(',');
