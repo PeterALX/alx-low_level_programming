@@ -1,2 +1,3 @@
 #include <stdio.h>
-_putchar(void);
+_putchar(char);
+void print_alphabet(void);
