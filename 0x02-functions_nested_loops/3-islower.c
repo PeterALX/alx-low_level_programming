@@ -1,19 +1,13 @@
 #include <stdio.h>
 
 /**
-* _islower- checks for lower case char
+* main - Entry point
 *
 * Return: 0
 */
-int _islower(int c)
+int main(void)
 {
-	if(c > 97 && c < 123){
-		return (1);
-	}
-	else
-	{
-		return (0);
-	}
 
+	return (0);
 }
 
