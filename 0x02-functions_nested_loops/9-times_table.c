@@ -37,6 +37,11 @@ void times_table(void)
 			{
 				_putchar((k / 10) + '0');
 				_putchar((k % 10) + '0');
+				if(j == 9)
+					continue;
+				_putchar(',');
+				_putchar(' ');
+				_putchar(' ');
 			}
 		}
 		_putchar('\n');
