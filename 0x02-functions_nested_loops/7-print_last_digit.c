@@ -7,8 +7,12 @@
 */
 int print_last_digit(int k)
 {
-	int l = k % 10;
+	int m;
 
-	return (l + l * 10);
+	if(k < 0)
+		m = (k % 10) * -1;
+	else
+		m = k % 10;
+	return (m + '0');
 }
 
