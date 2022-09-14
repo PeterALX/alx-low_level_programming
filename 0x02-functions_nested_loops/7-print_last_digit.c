@@ -9,7 +9,7 @@ int print_last_digit(int k)
 {
 	int m;
 
-	if(k < 0)
+	if (k < 0)
 		m = (k % 10) * -1;
 	else
 		m = k % 10;
