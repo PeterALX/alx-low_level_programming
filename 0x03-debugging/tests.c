@@ -7,9 +7,9 @@
 */
 int main(void)
 {
-	int month = 2;
+	int month = 1;
 	int day = 29;
-	int year = 2000;
+	int year = 2001;
 
 	printf("Date: %02d/%02d/%04d\n",month,day,year);
 	day = convert_day(month, day);
