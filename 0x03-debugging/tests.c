@@ -7,7 +7,7 @@
 */
 int main(void)
 {
-	int i = largest_number(5,3,2);
+	int i = largest_number(972,972,-98);
 
 	printf("%d is largest\n",i);
 	return (0);
