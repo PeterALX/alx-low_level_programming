@@ -7,8 +7,12 @@
 */
 int main(void)
 {
-	int i = largest_number(972,972,-98);
+	int month = 2;
+	int day = 29;
+	int year = 2000;
 
-	printf("%d is largest\n",i);
+	printf("Date: %02d/%02d/%04d\n",month,day,year);
+	day = convert_day(month, day);
+	print_remaining_days(month,day,year);
 	return (0);
 }
