@@ -38,10 +38,14 @@ void simple_print_buffer(char *buffer, unsigned int size)
 
 int main(void)
 {
-    char buffer[98] = {0x00};
-    simple_print_buffer(buffer, 98);
-    _memset(buffer, 0x03, 95);
-    printf("-------------------------------------------------\n");
-    simple_print_buffer(buffer, 98);    
-    return (0);
+	char *s = "hello";
+	char *f;
+
+	f = _strchr(s, 'l');
+
+	if (f != NULL)
+	{
+		printf("%s\n",f);
+	}
+	return (0);
 }
