@@ -2,9 +2,9 @@
 
 /**
 * _memcpy - Entry point
-* @dest:
-* @src:
-* @n:
+* @dest: the destination buffer
+* @src: the source buffer
+* @n: the number of times to copy
 * Return: pointer
 */
 char *_memcpy(char *dest, char *src, unsigned int n)
