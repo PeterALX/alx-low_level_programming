@@ -1,6 +1,5 @@
 #include "main.h"
-int _sqrt(int prev, int n);
-
+int _sqrt(int prev, int unsigned long int n);
 
 /**
 * _sqrt_recursion - returns the square root of a number
@@ -19,7 +18,7 @@ int _sqrt_recursion(int n)
 	return (_sqrt(n,n));
 }
 
-int _sqrt(int prev, int n)
+int _sqrt(int prev, unsigned long int n)
 {
 	if (prev < 0)
 		return (-1);
