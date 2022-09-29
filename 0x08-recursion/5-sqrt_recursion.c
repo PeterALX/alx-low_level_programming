@@ -18,7 +18,7 @@ int _sqrt_recursion(int n)
 * _sqrt - find the square root using recursion
 * @prev: previous value to be checked
 * @n: the number whose sqrt is to be found
-* return: the square root of n
+* Return: the square root of n
 */
 int _sqrt(int prev, int n)
 {
