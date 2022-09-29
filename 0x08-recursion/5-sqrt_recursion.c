@@ -14,6 +14,11 @@ int _sqrt_recursion(int n)
 	return (_sqrt(1, n));
 }
 
+/**
+* _sqrt - find the square root using recursion
+* @prev: previous value to be checked
+* @n: the number whose sqrt is to be found
+*/
 int _sqrt(int prev, int n)
 {
 	if (prev > n)
