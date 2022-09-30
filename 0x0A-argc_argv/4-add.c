@@ -2,34 +2,39 @@
 #include <ctype.h>
 
 /**
-* main - Entry point
-* @argc: number of arguments
-* @argv: array of arguments
-* Return: 0
-*/
+ * main - Entry point
+ * @argc: number of arguments
+ * @argv: array of arguments
+ * Return: 0
+ */
 int main(int argc, char **argv)
 {
 	int i = 1;
+	int j;
 	int sum = 0;
 
 	if (argc == 1)
 		printf("0\n");
-	else 
+	else
 	{
 		while (i < argc)
 		{
-			if(isdigit(*argv[i]))
+
+			for (j = 0; argv[i][j]; j++)
 			{
-				sum += atoi(argv[i]);
-				i++;
+				if (!(isdigit(argv[i][j])))
+				{
+					printf("Error\n");
+					return (1);
+				}
 			}
-			else
-			{
-				printf("Error\n");
-				return (1);
-			}
+			sum += atoi(argv[i]);
+			i++;
 		}
-		printf("%d\n",sum);
+
+		printf("%d\n", sum);
 	}
+
+
 	return (0);
 }
