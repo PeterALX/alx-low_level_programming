@@ -6,7 +6,11 @@
 */
 int main(int argc, char **argv)
 {
-	printf("%s",argv[0]);
+	while (*argv[0])
+	{
+		_putchar(*argv[0]);
+		(*argv[0])++;
+	}
 	_putchar('\n');
 	return (0);
 }
