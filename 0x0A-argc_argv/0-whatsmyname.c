@@ -4,7 +4,7 @@
 * main - entry point
 * Return: 0
 */
-int main(argc, **argv)
+int main(int argc, char **argv)
 {
 	printf("%s",argv[0]);
 	_putchar('\n');
