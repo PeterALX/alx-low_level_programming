@@ -1,15 +1,18 @@
 #include "main.h"
 
 /**
-* str_concat - concatenates two strings 
+* str_concat - concatenates two strings
 * @s1: string 1
 * @s2: string 2
 * Return: pointer to the concatenated string
 */
-char *str_concat(char *s1, char * s2)
+char *str_concat(char *s1, char *s2)
 {
 	int size;
 	char *str;
+	char *j = s1;
+	char *k = s2;
+	int i = 0;
 
 	size = 0;
 	if (s1)
@@ -30,11 +33,31 @@ char *str_concat(char *s1, char * s2)
 		}
 	}
 
-	str = malloc(sizeof(char) * (size));
+	str = malloc(sizeof(char) * (size + 1));
 
 	if (!str)
 		return (NULL);
 
+	if (j)
+	{
+		while (j[i])
+		{
+			str[i] = j[i];
+			i++;
+		}
+		i = 0;
+	}
+
+	if (k)
+	{
+
+		while (k[i])
+		{
+			str[i] = k[i];
+			i++;
+		}
+		i = 0;
+	}
 	return (str);
 }
 
