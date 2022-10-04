@@ -7,7 +7,12 @@
 */
 char *str_concat(char *s1, char *s2)
 {
-	int size, char *str, char *j = s1, char *k = s2, int i = 0, int m = 0;
+	int size;
+	char *str;
+	char *j = s1;
+	char *k = s2;
+	int i = 0;
+	int m = 0;
 
 	size = 0;
 	if (s1)
