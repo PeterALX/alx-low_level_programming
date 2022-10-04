@@ -15,13 +15,19 @@ char *str_concat(char *s1, char * s2)
 	if (s1)
 	{
 		while (*s1)
+		{
 			size++;
+			s1++;
+		}
 	}
 
 	if (s2)
 	{
 		while (*s2)
+		{
 			size++;
+			s2++;
+		}
 	}
 
 	str = malloc(sizeof(char) * (size));
