@@ -35,7 +35,7 @@ char *argstostr(int ac, char **av)
 	while (i < ac)
 	{
 		j = 0;
-		str[i] = av[i][0];
+		str[i - 1] = av[i][0];
 		i++;
 	}
 	str[i] = '\0';
