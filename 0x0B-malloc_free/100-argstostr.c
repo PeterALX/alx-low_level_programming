@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <string.h>
 /**
 * argstostr - concatenate all arguments to the program 
 * @ac: argument count
@@ -12,7 +12,7 @@ char *argstostr(int ac, char **av)
 	int size = 0;
 	int i = 1;
 	int j;
-	int strcount;
+/*	int strcount;*/
 
 	if (!ac || !av)
 		return (NULL);
