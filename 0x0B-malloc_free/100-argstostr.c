@@ -34,7 +34,7 @@ char *argstostr(int ac, char **av)
 	strcount = 0;
 	while (strcount < size)
 	{
-		if (*av)
+		if ((*av)[strcount])
 		{
 			str[strcount] = (*av)[strcount];
 		}
