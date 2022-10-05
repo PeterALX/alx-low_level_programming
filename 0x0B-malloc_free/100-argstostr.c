@@ -20,8 +20,10 @@ char *argstostr(int ac, char **av)
 	{
 		i = 0;
 		while (av[j][i])
+		{
 			i++;
 			size++;
+		}
 		j++;
 	}
 
