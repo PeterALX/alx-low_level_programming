@@ -31,7 +31,7 @@ char *argstostr(int ac, char **av)
 	str = malloc(sizeof(char) * (size + 1));
 	if (!str)
 		return (NULL);
-	*s = itoa(size);
+	*str = itoa(size);
 	return (str);
 }
 
