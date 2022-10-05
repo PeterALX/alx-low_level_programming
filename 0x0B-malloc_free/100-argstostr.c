@@ -30,18 +30,6 @@ char *argstostr(int ac, char **av)
 	str = malloc(sizeof(char) * (size + 1));
 	if (!str)
 		return (NULL);
-	i = 0;
-	j = 0;
-	while (i < ac)
-	{
-		j = 0;
-		while (av[i][j])
-		{
-			str[i * (j - 1) + j] = av[i][j];
-			j++;
-		}
-		i++;
-	}
 
 	return (str);
 }
