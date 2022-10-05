@@ -34,8 +34,10 @@ char *argstostr(int ac, char **av)
 	strcount = 0;
 	while (strcount < size)
 	{
-
-		str[strcount] = (*av)[strcount];
+		if (*av)
+		{
+			str[strcount] = (*av)[strcount];
+		}
 		strcount++;
 	}
 	str[strcount] = '\0';
