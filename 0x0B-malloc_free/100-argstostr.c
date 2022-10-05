@@ -9,7 +9,7 @@ char *argstostr(int ac, char **av)
 {
 	char *str;
 	int size = 0;
-	int i = 1;
+	int i = 0;
 	int j;
 	int strcount;
 
@@ -24,6 +24,7 @@ char *argstostr(int ac, char **av)
 			j++;
 			size++;
 		}
+		size++; /*each arg requires space for an additional char, newline*/
 		i++;
 	}
 
@@ -32,13 +33,19 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 
 	strcount = 0;
-	while (strcount < size)
+	i = 0;
+	while (i < ac)
 	{
-		if ((*av)[strcount])
+		j = 0;
+		while (av[i][j])
 		{
-			str[strcount] = (*av)[strcount];
+			str[strcount] = av[i][j];
+			j++;
+			strcount++;
 		}
+		str[strcount] = '\n';
 		strcount++;
+		i++;
 	}
 	str[strcount] = '\0';
 	return (str);
