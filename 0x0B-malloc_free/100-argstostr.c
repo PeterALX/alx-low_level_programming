@@ -1,5 +1,4 @@
 #include "main.h"
-#include <string.h>
 /**
 * argstostr - concatenate all arguments to the program 
 * @ac: argument count
@@ -12,7 +11,7 @@ char *argstostr(int ac, char **av)
 	int size = 0;
 	int i = 1;
 	int j;
-/*	int strcount;*/
+	int strcount;
 
 	if (!ac || !av)
 		return (NULL);
@@ -31,7 +30,12 @@ char *argstostr(int ac, char **av)
 	str = malloc(sizeof(char) * (size + 1));
 	if (!str)
 		return (NULL);
-	itoa(size,str,10);
+
+	strcount = 0;
+	while (strcount < size)
+	{
+		str[strcount] = 'k';
+	}
 	return (str);
 }
 
