@@ -35,7 +35,7 @@ char *argstostr(int ac, char **av)
 	while (strcount < size)
 	{
 
-		str[strcount] = av;
+		str[strcount] = 'k';
 		strcount++;
 	}
 	str[strcount] = '\0';
