@@ -12,6 +12,7 @@ char *argstostr(int ac, char **av)
 	int size = 0;
 	int i = 1;
 	int j;
+	int strcount;
 
 	if (!ac || !av)
 		return (NULL);
@@ -32,9 +33,15 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 
 	i = 1;
+	strcount = 0;
 	while (i < ac)
 	{
 		j = 0;
+		while (av[i][j])
+		{
+			str[strcount] = av[i][j];
+			strcount++;
+		}
 		str[i - 1] = av[i][0];
 		i++;
 	}
