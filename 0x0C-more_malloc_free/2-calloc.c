@@ -6,7 +6,7 @@
 * @size: size of each element
 * Return: pointer to the memory
 */
-void *calloc(unsigned int nmemb, unsigned int size)
+void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *k;
 
