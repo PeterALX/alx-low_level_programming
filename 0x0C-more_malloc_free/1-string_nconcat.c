@@ -8,11 +8,11 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int size = 0, i, strcount;
-
+	unsigned int size = 0, i, strcount = 0;
 	char *str;
-		if (!s1)
-			s1 = "";
+
+	if (!s1)
+		s1 = "";
 	if (!s2)
 		s2 = "";
 	while (s1[size])
