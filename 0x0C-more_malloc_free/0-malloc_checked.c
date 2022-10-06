@@ -9,6 +9,7 @@
 void *malloc_checked(unsigned int b)
 {
 	void *k = malloc(b);
+
 	if (!k)
 		exit(98);
 	return (k);
