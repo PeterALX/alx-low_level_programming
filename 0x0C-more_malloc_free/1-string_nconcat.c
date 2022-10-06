@@ -6,11 +6,11 @@
  * @n: how many chars of n to concat
  * Return: pointer to the concatenated string
  */
-char *strconcat(char *s1, char *s2, unsigned int n)
+char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	int size = 0;
-	char *str, int i, int strcount
+	unsigned int size = 0, i, strcount;
 
+	char *str;
 		if (!s1)
 			s1 = "";
 	if (!s2)
@@ -35,6 +35,6 @@ char *strconcat(char *s1, char *s2, unsigned int n)
 		strcount++;
 		i++;
 	}
-	str[strcount] = 0;
+	str[strcount] = '\0';
 	return (str);
 }
