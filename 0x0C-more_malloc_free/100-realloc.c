@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-* realloc - reallocate a memory block using malloc
+* _realloc - reallocate a memory block using malloc
 * @ptr: the memory to be reallocated
 * @old_size: the old size of the memory
 * @new_size: the new size of the memory
