@@ -1,4 +1,3 @@
-#include "main.h"
 
 /**
 * main - entry point, print name of file it was compiled from
@@ -7,5 +6,6 @@
 */
 int main(void)
 {
-	printf()
+	printf(__BASE_FILE__);
+	return (0);
 }
