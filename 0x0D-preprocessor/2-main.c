@@ -1,4 +1,4 @@
-
+#include <stdio.h>
 /**
 * main - entry point, print name of file it was compiled from
 *
@@ -6,6 +6,6 @@
 */
 int main(void)
 {
-	printf(__BASE_FILE__);
+	printf(__BASE_FILE__"\n");
 	return (0);
 }
