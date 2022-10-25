@@ -1,4 +1,4 @@
-#include "main.h"
+#include "lists.h"
 
 /**
 * print_list - prints elements of a list
@@ -14,9 +14,9 @@ size_t print_list(const list_t *h)
 	{
 
 		if (ptr->len == 0)
-			printf("[%u] %s\n", h->len, "(nil)");
+			printf("[%u] %s\n", ptr->len, "(nil)");
 		else
-			printf("[%u] %s\n", h->len, h->str);
+			printf("[%u] %s\n", ptr->len, ptr->str);
 		ptr = ptr->next;
 		list_len++;
 	}
