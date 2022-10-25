@@ -2,7 +2,7 @@
 
 /**
 * add_node - add node at the beginning of a list_t list
-* @head - the head node of the list
+* @head:  the head node of the list
 * @str: the contents of the node added
 * Return: address to the new element
 */
@@ -13,7 +13,7 @@ list_t *add_node(list_t **head, const char *str)
 
 	if (!new_node)
 		return (NULL);
-	
+
 	str_len = 0;
 	while (str[str_len])
 		str_len++;
