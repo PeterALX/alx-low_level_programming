@@ -9,6 +9,7 @@ int pop_listint(listint_t **head)
 {
 	int contents;
 	listint_t *ptr;
+
 	if (!*head)
 		return (0);
 
