@@ -9,7 +9,7 @@ int sum_listint(listint_t *head)
 {
 	const listint_t *ptr;
 	int list_len = 0;
-	int sum;
+	int sum = 0;
 
 	if (!head)
 		return (0);
