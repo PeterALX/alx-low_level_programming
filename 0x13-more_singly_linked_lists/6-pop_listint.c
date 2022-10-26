@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
-* pop_listint - delete the head node of a listint_t linked list and return the head node's data
+* pop_listint - delete the head node of a listint_t
 * @head: the head node of the list
 * Return: the head node's data, 0 if list is empty
 */
