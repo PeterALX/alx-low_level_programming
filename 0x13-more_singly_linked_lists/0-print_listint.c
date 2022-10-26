@@ -1,10 +1,10 @@
 #include "lists.h"
 
 /**
-*
-*
-* Return:
-*/
+ * print_listint - print the elements of a listint_t list
+ * @h: the head node of the list to be printed
+ * Return: the number of nodes in the list
+ */
 size_t print_listint(const listint_t *h)
 {
 	const listint_t *ptr = h;
