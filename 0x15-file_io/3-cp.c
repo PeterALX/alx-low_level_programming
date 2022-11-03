@@ -35,11 +35,6 @@ int main(int argc, char *argv[])
 	}
 	while ((r = read(from, buffer, 1024)) > 0)
 	{
-		if (r == -1)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-			exit(98);
-		}
 		if (write(to, buffer, r) == - 1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
@@ -47,6 +42,11 @@ int main(int argc, char *argv[])
 		}
 		
 
+	}
+	if (r == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		exit(98);
 	}
 	if (close(from) == -1)
 	{
