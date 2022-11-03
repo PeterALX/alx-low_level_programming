@@ -7,7 +7,8 @@ void usage_error(void);
 void read_error(char *filename);
 /**
  * main - copy contents of a file into another file
- *
+ * @argc: no of arguments passed to the program
+ * @argv: an array of the arguments passed to the program
  * Return: 0
  */
 int main(int argc, char *argv[])
