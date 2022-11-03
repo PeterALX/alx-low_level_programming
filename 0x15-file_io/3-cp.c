@@ -38,5 +38,17 @@ int main(int argc, char *argv[])
 		write(to, buffer, r);
 
 	}
+	if (close(from) == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", from);
+		exit(100);
+
+	}
+	if (close(to) == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", to);
+		exit(100);
+
+	}
 	return (0);
 }
