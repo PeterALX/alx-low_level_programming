@@ -2,6 +2,9 @@
 #include "stdlib.h"
 #include "stdio.h"
 
+
+void usage_error(void);
+void read_error(char *filename);
 /**
  * main - copy contents of a file into another file
  *
@@ -9,24 +12,18 @@
  */
 int main(int argc, char *argv[])
 {
-	int from;
-	int to;
+	int from, to, r;
 	char buffer[1024];
-	int r;
 
 	if (argc != 3)
 	{
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
-		exit(97);
+		usage_error();
 	}
-
 	from = open(argv[1], O_RDONLY);
 	to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-
 	if (from == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-		exit(98);
+		read_error(argv[1]);
 	}
 	if (to == -1)
 	{
@@ -35,13 +32,11 @@ int main(int argc, char *argv[])
 	}
 	while ((r = read(from, buffer, 1024)) > 0)
 	{
-		if (write(to, buffer, r) == - 1)
+		if (write(to, buffer, r) == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			exit(99);
 		}
-		
-
 	}
 	if (r == -1)
 	{
@@ -62,3 +57,16 @@ int main(int argc, char *argv[])
 	}
 	return (0);
 }
+void usage_error(void)
+{
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+		exit(97);
+}
+
+void read_error(char *filename)
+{
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", filename);
+		exit(99);
+
+}
+
