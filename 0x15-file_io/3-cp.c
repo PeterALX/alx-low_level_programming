@@ -57,12 +57,21 @@ int main(int argc, char *argv[])
 	}
 	return (0);
 }
+/**
+ * usage_error - prints error when program is used wrongly
+ * Return: void
+ */
 void usage_error(void)
 {
 	dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 	exit(97);
 }
 
+/**
+ * read_error - prints error when a file fails to be read
+ * @filename: name of the file that failed to be read
+ * Return: void
+ */
 void read_error(char *filename)
 {
 	dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", filename);
