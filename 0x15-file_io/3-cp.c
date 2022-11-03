@@ -30,8 +30,8 @@ int main(int argc, char *argv[])
 	}
 	if (to == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[2]);
-		exit(98);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+		exit(99);
 	}
 	while ((r = read(from, buffer, 1024)) > 0)
 	{
