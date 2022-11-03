@@ -35,7 +35,12 @@ int main(int argc, char *argv[])
 	}
 	while ((r = read(from, buffer, 1024)) > 0)
 	{
-		write(to, buffer, r);
+		if (write(to, buffer, r) == - 1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+			exit(99);
+		}
+		
 
 	}
 	if (close(from) == -1)
