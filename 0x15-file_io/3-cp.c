@@ -59,14 +59,13 @@ int main(int argc, char *argv[])
 }
 void usage_error(void)
 {
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
-		exit(97);
+	dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+	exit(97);
 }
 
 void read_error(char *filename)
 {
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", filename);
-		exit(99);
-
+	dprintf(STDERR_FILENO, "Error: Can't read from file%s\n", filename);
+	exit(99);
 }
 
