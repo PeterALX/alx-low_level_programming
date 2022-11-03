@@ -66,6 +66,6 @@ void usage_error(void)
 void read_error(char *filename)
 {
 	dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", filename);
-	exit(99);
+	exit(98);
 }
 
