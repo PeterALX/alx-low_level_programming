@@ -4,6 +4,7 @@
 /**
  * add_dnodeint_end - insert a node at the end of dlistint_t list
  * @head: the head node of the list
+ * @n: content of the new node
  * Return: address of the inserted node
  */
 
