@@ -1,13 +1,13 @@
 #include <stdio.h>
 
 /**
-* main - Entry point
+* _putchar - write a char to stdout
 *
 * Return: 0
 */
-int main(void)
+int _putchar(char c)
 {
-	printf("_putchar\n");
+	printf("%c", c);
 	return (0);
 }
 
