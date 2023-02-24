@@ -7,5 +7,11 @@ all : school
 
 school: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
-$(OBJ): $(SRC)
-	$(CC) -c -o $(OBJ) $(SRC)
+
+main.o: main.c
+	$(CC) main.c -o main.o
+
+school.o: school.c
+	$(CC) school.c -o school.o
+
+
