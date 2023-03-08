@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * _isupper - check the code.
  * @c: an input character.
@@ -6,8 +7,17 @@
  */
 int _isupper(int c)
 {
-	if (c >= 'A' && c <= 'Z')
-		return (1);
-	else
-		return (0);
+	char C = 'A';
+	int i = 0;
+
+	for (; C <= 'Z'; C++)
+	{
+		if (c == C)
+		{
+			i = 1;
+			break;
+		}
+	}
+
+	return (i);
 }
