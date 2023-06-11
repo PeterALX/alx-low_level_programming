@@ -41,9 +41,12 @@ int main(int argc, char *argv[])
 			coins_given += balance / 2;
 			balance %= 2;
 		}
-		coins_given += balance;
-		balance = 0;
-		printf("%d\n", coins_given);
+		else
+		{
+			coins_given += balance;
+			balance = 0;
+		}
 	}
+	printf("%d\n", coins_given);
 	return (0);
 }
