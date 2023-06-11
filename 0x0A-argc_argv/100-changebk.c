@@ -12,8 +12,6 @@ int main(int argc, char *argv[])
 {
 	int balance;
 	int coins_given = 0;
-	int denominations[] = {25, 10, 5, 2, 1};
-	int i = 0; 
 
 	if (argc != 2)
 	{
@@ -21,14 +19,34 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 	balance = atoi(argv[1]);
-	for (i = 0; i < (int)(sizeof(denominations) / sizeof(denominations[0])); i++)
+	while (balance > 0)
 	{
-		if (balance == 0) break;
-		if (balance / denominations[i] == 0) continue;
-		coins_given += balance / denominations[i];
-		balance %= denominations[i];
+		if (balance / 25 > 0)
+		{
+			coins_given += balance / 25;
+			balance %= 25;
+		}
+		else if (balance / 10 > 0)
+		{
+			coins_given += balance / 10;
+			balance %= 10;
+		}
+		else if (balance / 5 > 0)
+		{
+			coins_given += balance / 5;
+			balance %= 5;
+		}
+		else if (balance / 2 > 0)
+		{
+			coins_given += balance / 2;
+			balance %= 2;
+		}
+		else
+		{
+			coins_given += balance;
+			balance = 0;
+		}
 	}
-
 	printf("%d\n", coins_given);
 	return (0);
 }
