@@ -11,7 +11,7 @@
 int main(int argc, char *argv[])
 {
 	int balance;
-	int coins_given;
+	int coins_given = 0;
 	int denominations[] = {25, 10, 5, 2, 1};
 	int i = 0;
 
