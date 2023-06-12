@@ -1,5 +1,5 @@
-#ifndef _MALLOC_
-#define _MALLOC_
+#ifndef __MALLOC__
+#define __MALLOC__
 
 #include <stdlib.h>
 
