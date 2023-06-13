@@ -1,5 +1,10 @@
 #include "main.h"
 
+/**
+ * _strdup - create a copy of a string using malloc
+ * @str: the string to be duplicated
+ * Return: a pointer to the duplicate, zero if failure
+ */
 char *_strdup(char *str)
 {
 	int len = 0;
@@ -7,7 +12,7 @@ char *_strdup(char *str)
 
 	if (!str)
 		return (NULL);
-	
+
 	while (str[len])
 		len++;
 	len += 1;
