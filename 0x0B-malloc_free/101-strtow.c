@@ -11,6 +11,7 @@ int scan_and_pack(char **str_array, char *str, int buff_index,
  */
 char **strtow(char *str)
 {
+	int success = 0;
 	int i;
 	int word_count;
 	char **str_array = NULL;
@@ -20,6 +21,8 @@ char **strtow(char *str)
 	int j;
 	int strlen = 0;
 
+	if (!str)
+		return (NULL);
 	word_count = 0;
 	for (i = 0; str[i]; i++)
 	{
@@ -29,6 +32,8 @@ char **strtow(char *str)
 		if (str[i + 1] == ' ' || str[i + 1] == '	' || str[i + 1] == '\0')
 			word_count += 1;
 	}
+	if (word_count == 0)
+		return (NULL);
 
 	str_array = malloc(sizeof(char *) * (word_count + 1));
 	if (!str_array)
