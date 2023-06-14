@@ -11,7 +11,6 @@ int scan_and_pack(char **str_array, char *str, int buff_index,
  */
 char **strtow(char *str)
 {
-	int success = 0;
 	int i;
 	int word_count;
 	char **str_array = NULL;
