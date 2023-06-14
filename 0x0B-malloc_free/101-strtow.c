@@ -27,7 +27,7 @@ char **strtow(char *str)
 	for (i = 0; str[i]; i++)
 	{
 		strlen++;
-		if (str[i] == ' ' || str[i] == '	' || str[i] == '\0')
+		if (str[i] == ' ' || str[i] == '	')
 			continue;
 		if (str[i + 1] == ' ' || str[i + 1] == '	' || str[i + 1] == '\0')
 			word_count += 1;
