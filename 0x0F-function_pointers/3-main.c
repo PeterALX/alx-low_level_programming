@@ -5,7 +5,7 @@
 /**
  * main - entry point to the program
  * @argc: number of arguments to the program
- * @argv: array of the arguments to the program 
+ * @argv: array of the arguments to the program
  * Return: exits with a status code on fail, return 0 otherwise
  */
 int main(int argc, char **argv)
