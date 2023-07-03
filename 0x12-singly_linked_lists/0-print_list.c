@@ -1,9 +1,8 @@
 #include "lists.h"
-#include <stddef.h>
 
 size_t print_list(const list_t *h)
 {
-	const list_t *ph;
+	/* const list_t *ph; */
 	int len = 0;
 
 	while (h)
