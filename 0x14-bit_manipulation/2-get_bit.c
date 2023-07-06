@@ -18,7 +18,7 @@ int get_bit(unsigned long int n, unsigned int index)
 		width += 1;
 		i = _pow(2, width) + i;
 	}
-	if (index > (unsigned)width)
+	if (index > (unsigned int)width)
 		return (-1);
 	while (width >= 0)
 	{
