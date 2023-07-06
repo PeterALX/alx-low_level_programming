@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * get_bit - returns the bit at a given index in a decimal number
@@ -19,7 +18,7 @@ int get_bit(unsigned long int n, unsigned int index)
 		width += 1;
 		i = _pow(2, width) + i;
 	}
-	if ((int)index > width || (int)index < 0)
+	if (index > (unsigned)width)
 		return (-1);
 	while (width >= 0)
 	{
