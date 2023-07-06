@@ -11,7 +11,6 @@ void print_binary(unsigned long int n)
 		width += 1;
 		i = _pow(2, width) + i;
 	}
-	/* width++; */
 	while (width >= 0)
 	{
 		if ((unsigned int)_pow(2,width) <= n)

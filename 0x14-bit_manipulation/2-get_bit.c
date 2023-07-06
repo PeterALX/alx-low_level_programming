@@ -12,7 +12,6 @@ int get_bit(unsigned long int n, unsigned int index)
 		width += 1;
 		i = _pow(2, width) + i;
 	}
-	/* width++; */
 	if ((int)index > width)
 		return (-1);
 	while (width >= 0)
@@ -32,8 +31,6 @@ int get_bit(unsigned long int n, unsigned int index)
 		}
 		width--;
 	}
-	/* printf("............\n"); */
 	return (val);
-	/* printf("width %lu: %d\n", n, width); */
 
 }
