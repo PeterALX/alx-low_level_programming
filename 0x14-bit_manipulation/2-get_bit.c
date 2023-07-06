@@ -1,5 +1,11 @@
 #include "main.h"
 
+/**
+ * get_bit - returns the bit at a given index in a decimal number
+ * @n: the decimal number
+ * @index: the index of the bit to be returned
+ * Return: the bit vallue
+ */
 int get_bit(unsigned long int n, unsigned int index)
 {
 	int width;
@@ -16,12 +22,12 @@ int get_bit(unsigned long int n, unsigned int index)
 		return (-1);
 	while (width >= 0)
 	{
-		if ((unsigned int)_pow(2,width) <= n)
+		if ((unsigned int)_pow(2, width) <= n)
 		{
 			val = 1;
 			n -= _pow(2, width);
 		}
-		else 
+		else
 		{
 			val = 0;
 		}
