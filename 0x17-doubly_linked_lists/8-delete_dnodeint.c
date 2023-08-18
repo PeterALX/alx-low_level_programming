@@ -6,7 +6,6 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int idx)
 	dlistint_t *tmp = *head;
 
 	if (!head) {
-		printf("You passed a null pointer you twat");
 		return(-1);
 	}
 
@@ -17,7 +16,6 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int idx)
 	}
 	if (!tmp)
 	{
-		printf("index not found brev\n");
 		return (-1);
 	}
 
