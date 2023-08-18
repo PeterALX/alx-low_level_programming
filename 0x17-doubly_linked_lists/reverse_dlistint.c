@@ -1,4 +1,4 @@
-#include "main.h"
+#include "lists.h"
 
 void reverse_list_node(dlistint_t **head)
 {
