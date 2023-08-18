@@ -8,7 +8,6 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **head, unsigned int idx, int n)
 
 	if (!head)
 	{
-		printf("You passed a null pointer you twat");
 		return (NULL);
 	}
 
@@ -17,7 +16,6 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **head, unsigned int idx, int n)
 		new_node = malloc(sizeof(dlistint_t));
 		if (!new_node)
 		{
-			printf("malloc failed");
 			return (NULL);
 		}
 		new_node->next = *head;
@@ -37,13 +35,11 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **head, unsigned int idx, int n)
 	}
 	if (!tmp)
 	{
-		printf("index %d out of bounds mf\n", idx);
 		return (NULL);
 	}
 	new_node = malloc(sizeof(dlistint_t));
 	if (!new_node)
 	{
-		printf("malloc failed");
 		return (NULL);
 	}
 
