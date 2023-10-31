@@ -16,7 +16,7 @@ int main(void)
 
 	for (it = 0; it < 50; it++)
 	{
-		if (i == 4000000)
+		if (i >= 4000000)
 			break;
 		if (i % 2 == 0)
 			sum += i;
