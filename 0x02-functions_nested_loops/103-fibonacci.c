@@ -8,18 +8,22 @@
 
 int main(void)
 {
-	int i;
-	long int fibonacci[50], sum = 2;
+	unsigned long  int i = 0;
+	unsigned long int j = 1;
+	unsigned long int k = 1;
+	int it;
+	int sum = 0;
 
-	fibonacci[0] = 1;
-	fibonacci[1] = 2;
-
-	for (i = 2; i < 50; ++i)
+	for (it = 0; it < 50; it++)
 	{
-		fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
-		if ((fibonacci[i] % 2) == 0 && fibonacci[i] < 4000000)
-			sum += fibonacci[i];
+		if (i == 4000000)
+			break;
+		if (i % 2 == 0)
+			sum += i;
+		i = j;
+		j = k;
+		k = i + j;
 	}
-	printf("%ld\n", sum);
+	printf("%d\n", sum);
 	return (0);
 }
