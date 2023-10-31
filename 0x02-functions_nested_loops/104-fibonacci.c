@@ -15,7 +15,7 @@ int main(void)
 
 	for (it = 0; it < 98; it++)
 	{
-		printf("%lu", i);
+		printf("%lu", j);
 		if (it != 97)
 			printf(", ");
 		i = j;
