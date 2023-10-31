@@ -15,7 +15,9 @@ int main(void)
 
 	for (it = 0; it < 98; it++)
 	{
-		printf("%lu\n", i);
+		printf("%lu", i);
+		if (it != 97)
+			printf(", ");
 		i = j;
 		j = k;
 		k = i + j;
