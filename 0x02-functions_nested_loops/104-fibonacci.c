@@ -8,14 +8,14 @@
 
 int main(void)
 {
-	long long unsigned int i = 1;
-	long long unsigned int j = 1;
-	long long unsigned int k = 2;
+	long unsigned int i = 1;
+	long unsigned int j = 1;
+	long unsigned int k = 2;
 	int it;
 
 	for (it = 0; it < 98; it++)
 	{
-		printf("%llu\n", i);
+		printf("%lu\n", i);
 		i = j;
 		j = k;
 		k = i + j;
