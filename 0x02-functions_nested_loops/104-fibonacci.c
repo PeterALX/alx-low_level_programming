@@ -8,9 +8,9 @@
 
 int main(void)
 {
-	long unsigned int i = 1;
-	long unsigned int j = 1;
-	long unsigned int k = 2;
+	unsigned long  int i = 1;
+	unsigned long int j = 1;
+	unsigned long int k = 2;
 	int it;
 
 	for (it = 0; it < 98; it++)
