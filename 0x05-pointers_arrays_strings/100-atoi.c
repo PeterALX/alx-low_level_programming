@@ -24,10 +24,10 @@ int _atoi(char *s)
 		{
 			break;
 		}
-		// else if (*s != '-' && *s != '+' && *s != ' ')
-		// {
-		// 	negative = 1;
-		// }
+		/* else if (*s != '-' && *s != '+' && *s != ' ')
+		{
+			negative = 1;
+		}*/
 		s++;
 	}
 
