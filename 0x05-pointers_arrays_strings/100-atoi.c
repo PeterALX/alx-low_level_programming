@@ -9,16 +9,14 @@ int _atoi(char *s)
 {
 	int num = 0;
 	int found_num = 0;
-	int is_negative = 0;
+	int negative = 1;
 
 	while (*s)
 	{
+		if (*s == '-')
+			negative *= -1;
 		if (*s >= '0' && *s <= '9')
 		{
-			if (*(s - 1) == '-')
-			{
-				is_negative = 1;
-			}
 			num = num * 10 + *s - '0';
 			found_num = 1;
 		}
@@ -26,8 +24,12 @@ int _atoi(char *s)
 		{
 			break;
 		}
+		else if (*s != '-' && *s != '+')
+		{
+			negative = 1;
+		}
 		s++;
 	}
 
-	return (is_negative ? -num : num);
+	return (negative == -1 ? -num : num);
 }
