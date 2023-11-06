@@ -7,6 +7,30 @@
  */
 int _atoi(char *s)
 {
+	unsigned int num = 0;
+	int found_num = 0;
+	int negative = 1;
+
+	while (*s)
+	{
+		if (*s == '-')
+			negative *= -1;
+		if (*s >= '0' && *s <= '9')
+		{
+			num = num * 10 + *s - '0';
+			found_num = 1;
+		}
+		else if (found_num)
+		{
+			break;
+		}
+		s++;
+	}
+
+	return (negative == -1 ? -num : num);
+}
+
+	/*
 	int sign = 1;
 	unsigned int total = 0;
 	char null_flag = 0;
@@ -30,26 +54,4 @@ int _atoi(char *s)
 		total = (-total);
 
 	return (total);
-}
-
-	/*int num = 0;
-	int found_num = 0;
-	int negative = 1;
-
-	while (*s)
-	{
-		if (*s == '-')
-			negative *= -1;
-		if (*s >= '0' && *s <= '9')
-		{
-			num = num * 10 + *s - '0';
-			found_num = 1;
-		}
-		else if (found_num)
-		{
-			break;
-		}
-		s++;
-	}
-
-	return (negative == -1 ? -num : num); */
+	*/
