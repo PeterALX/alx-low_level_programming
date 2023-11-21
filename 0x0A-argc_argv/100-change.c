@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 	if (balance < 0)
 	{
 		printf("0\n");
-		return(0);
+		return (0);
 	}
 	for (i = 0; i < (int)(sizeof(denominations) / sizeof(denominations[0])); i++)
 	{
