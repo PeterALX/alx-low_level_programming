@@ -73,27 +73,22 @@ char **strtow(char *str)
 	char **strarr = NULL;
 	int word_start;
 
-
 	if (!str || !str[0])
 		return (NULL);
 
-	/*figure out word count */
 	for (i = 0; str[i]; i++)
 	{
 		if (!is_space(str[i]) && is_space(str[i + 1]))
 			word_count++;
 	}
-
 	if (word_count == 0)
 		return (NULL);
 
-	/* alloc some mem */
 	strarr = malloc(sizeof(char *) * (word_count + 1));
 	if (!strarr)
 		return (NULL);
 	strarr[0] = NULL;
 
-	/*pack them words */
 	word_start = 0;
 	for (i = 0; str[i]; i++)
 	{
