@@ -21,6 +21,11 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 	balance = atoi(argv[1]);
+	if (balance < 0)
+	{
+		printf("0\n");
+		return(0);
+	}
 	for (i = 0; i < (int)(sizeof(denominations) / sizeof(denominations[0])); i++)
 	{
 		if (balance == 0)
