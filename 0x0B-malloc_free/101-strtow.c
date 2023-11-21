@@ -66,7 +66,7 @@ void free_strarr(char **strarr)
  * @str: the string to be split
  * Return: an array of the words, NULL on failure
  */
-char **strtow(UNUSED(char *str))
+char **strtow(char *str)
 {
 	int i;
 	int word_count = 0;
@@ -84,6 +84,9 @@ char **strtow(UNUSED(char *str))
 			word_count++;
 	}
 
+	if (word_count == 0)
+		return (NULL);
+
 	/* alloc some mem */
 	strarr = malloc(sizeof(char *) * (word_count + 1));
 	if (!strarr)
@@ -94,8 +97,11 @@ char **strtow(UNUSED(char *str))
 	word_start = 0;
 	for (i = 0; str[i]; i++)
 	{
-		if (!is_space(str[i]) && is_space(str[i - 1]))
-			word_start = i;
+		if (i > 0)
+		{
+			if (!is_space(str[i]) && is_space(str[i - 1]))
+				word_start = i;
+		}
 		if (!is_space(str[i]) && is_space(str[i + 1]))
 		{
 			if (!append_string(strarr, str + word_start, i - word_start + 1))

@@ -25,7 +25,7 @@ int main(void)
 {
 	char **tab;
 
-	tab = strtow("deez nuts pon di fes");
+	tab = strtow(" ");
 	if (tab == NULL)
 	{
 		printf("Failed\n");
