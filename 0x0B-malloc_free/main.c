@@ -17,6 +17,20 @@ void print_tab(char **tab)
 }
 
 /**
+ * free_strarr - frees an array of strings
+ * @strarr: the array of strings to be freed
+ * Return: 1 is success, 0 if fail
+ */
+void free_strarr(char **strarr)
+{
+	while (*strarr)
+	{
+		free(*strarr);
+		strarr++;
+	}
+}
+
+/**
  * main - check the code for ALX School students.
  *
  * Return: 1 if an error occurred, 0 otherwise
@@ -25,7 +39,15 @@ int main(void)
 {
 	char **tab;
 
-	tab = strtow(" ");
+	int i = 0;
+	while (i < 10000)
+	{
+		tab = strtow("deez balls fr fr no cappin");
+		free_strarr(tab);
+		tab = NULL;
+	}
+
+	tab = strtow("deez balls fr fr no cappin");
 	if (tab == NULL)
 	{
 		printf("Failed\n");

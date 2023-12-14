@@ -1,50 +1,30 @@
 #include "main.h"
 
 /**
- * binary_to_uint - converts a binary number to an unsigned int
- * @b: a string representing the binary number
- * Return: the decimal representation of the binary number, 0 if
- * @b has a character that is not 0 or 1
+ * binary_to_uint - A finction that converts binary number
+ * to an unsigned integer
+ * @b: A pointer to binary string
+ * Return: unsigned integer converted number
  */
 unsigned int binary_to_uint(const char *b)
 {
-	int i;
-	unsigned int result = 0;
-	int len;
+	unsigned int base = 1, result = 0, len = 0;
 
-	if (!b)
+	if (b == NULL)
 		return (0);
-	i = 0;
-	while (b[i])
+
+	while (b[len])
+		len++;
+
+	while (len)
 	{
-		if (b[i] != '1' && b[i] != '0')
+		if (b[len - 1] != '0' && b[len - 1] != '1')
 			return (0);
-		i++;
-	}
-	i -= 1;
-	len = i;
-	while (i >= 0)
-	{
-		result += (b[len - i] - 48) * _pow(2, i);
-		i--;
-	}
-	return (result);
-}
 
-/**
- * _pow - returns x raised to the power of y
- * @x: x
- * @y: y
- * Return: x raised to the power of y
- */
-int _pow(int x, int y)
-{
-	int result = 1;
-
-	while (y > 0)
-	{
-		result *= x;
-		y--;
+		if (b[len - 1] == '1')
+			result += base;
+		base *= 2;
+		len--;
 	}
 	return (result);
 }
