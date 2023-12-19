@@ -14,14 +14,12 @@ int main(int ac, char **av)
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	};
-
 	file_from = open(av[1], O_RDONLY);
 	if (file_from < 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
 		exit(98);
 	}
-
 	file_to = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (file_to < 0)
 	{
@@ -29,7 +27,6 @@ int main(int ac, char **av)
 		close(file_from); /* add check */
 		exit(99);
 	}
-
 	do {
 		rcount = read(file_from, buf, 1024);
 		if (rcount < 0)
@@ -48,7 +45,6 @@ int main(int ac, char **av)
 			exit(99);
 		}
 	} while (rcount > 0);
-
 	close(file_from);
 	close(file_to);
 	return (0);
