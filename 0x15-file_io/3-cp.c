@@ -8,7 +8,7 @@ void close_descriptors(int from, int to);
 
 /**
  * main - entry point into my sweet program
- * @ac: number of commandline args 
+ * @ac: number of commandline args
  * @av: the commandline args
  *
  * Return: 0 on success, appropriate errno on fail.
@@ -70,10 +70,18 @@ void close_descriptors(int from, int to)
 {
 	if (from > 0)
 	{
-		close(from);
+		if (close(from) == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", from);
+			exit(100);
+		}
 	}
 	if (to > 0)
 	{
-		close(to);
+		if (close(to) == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", to);
+			exit(100);
+		}
 	}
 }
