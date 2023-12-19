@@ -1,5 +1,6 @@
 #include "main.h"
 #include <sys/types.h>
+#include <unistd.h>
 
 /**
  * read_textfile - reads a text file to stdout
@@ -33,5 +34,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		free(buf);
 		return (0);
 	}
+	free(buf);
+	close(fd);
 	return (wcount);
 }
