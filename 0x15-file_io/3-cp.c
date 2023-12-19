@@ -5,7 +5,7 @@
 #include <unistd.h>
 int main(int ac, char **av)
 {
-	int file_from, file_to, from_close, to_close;
+	int file_from, file_to;
 	ssize_t rcount, wcount;
 	char buf[1024];
 
@@ -26,7 +26,7 @@ int main(int ac, char **av)
 	if (file_to < 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
-		close(file_from); //add check
+		close(file_from); /* add check */
 		exit(99);
 	}
 
@@ -35,7 +35,7 @@ int main(int ac, char **av)
 		if (rcount < 0)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
-			close(file_from); //check these bad boys
+			close(file_from); /* check these bad boys */
 			close(file_to);
 			exit(98);
 		}
@@ -43,13 +43,13 @@ int main(int ac, char **av)
 		if (wcount < 0)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
-			close(file_from); //check these bad boys
+			close(file_from); /* check these bad boys */
 			close(file_to);
 			exit(99);
 		}
 	} while (rcount > 0);
 
-	close(file_from); //check these bad boys
+	close(file_from);
 	close(file_to);
 	return (0);
 }
