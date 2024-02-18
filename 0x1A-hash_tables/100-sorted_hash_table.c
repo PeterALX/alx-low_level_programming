@@ -33,7 +33,7 @@ shash_table_t *shash_table_create(unsigned long int size)
 }
 
 /**
- * insert_to_sorted_list - inserts a node to the sorted linked list by key's ASCII
+ * insert_to_sorted_list - inserts a node to the sorted linked list
  * @sht: The sorted hash table
  * @node: The node to be inserted
  * Return: void
