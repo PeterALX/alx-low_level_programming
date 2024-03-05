@@ -1,6 +1,4 @@
 #include "hash_tables.h"
-#include <stdlib.h>
-#include <string.h>
 
 /**
  * hash_table_set - sets a key in the hash table
@@ -26,6 +24,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		if (strcmp(tmp->key, key) == 0)
 		{
+			free(tmp->value);
 			tmp->value = strdup(value);
 			return (1);
 		}
