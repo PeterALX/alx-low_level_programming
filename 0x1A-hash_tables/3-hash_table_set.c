@@ -4,7 +4,8 @@
 
 /**
  * hash_table_set - sets a key in the hash table
- * @key: the key to be set 
+ * @ht: the hash table
+ * @key: the key to be set
  * @value: the value at that key
  * Return: 1 on success, 0 on failure
  */
