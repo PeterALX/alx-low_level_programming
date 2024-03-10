@@ -18,7 +18,6 @@ void hash_table_delete(hash_table_t *ht)
 	{
 		for (tmp = ht->array[i]; tmp != NULL; tmp = tmp->next)
 		{
-			printf("freeing: %s\n", tmp->key);
 			free(tmp->key);
 			free(tmp->value);
 			free(tmp);
