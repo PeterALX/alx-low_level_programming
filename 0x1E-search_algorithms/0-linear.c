@@ -4,7 +4,7 @@
  * linear_search - linear search an array
  * @array: the array to search
  * @size: The size of the array
- * @value: The value to be searched 
+ * @value: The value to be searched
  * Return: the first index where the array is found, -1 if not found
  */
 int linear_search(int *array, size_t size, int value)
