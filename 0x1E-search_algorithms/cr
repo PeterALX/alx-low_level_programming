@@ -1,7 +1,7 @@
 #! /usr/bin/bash
 
-# gcc -Wall -Werror -Wextra -pedantic -std=gnu89 main.c
-gcc ./*.c
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 ./*.c
+# gcc ./*.c
 ./a.out
 
 rm a.out
