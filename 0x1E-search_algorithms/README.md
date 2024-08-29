@@ -1,1 +1,1 @@
-Search algos
+C - Search Algorithms

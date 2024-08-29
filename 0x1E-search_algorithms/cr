@@ -1,9 +1,0 @@
-#! /usr/bin/bash
-
-gcc -Wall -Werror -Wextra -pedantic -std=gnu89 ./*.c
-# gcc ./*.c
-./a.out
-
-rm a.out
-
-#compile and run the code in this folder
